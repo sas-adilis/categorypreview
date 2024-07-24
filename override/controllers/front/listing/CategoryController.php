@@ -12,7 +12,7 @@ class CategoryController extends CategoryControllerCore
 
         ProductListingFrontController::init();
 
-        if (Tools::getValue('adtoken') == Tools::getAdminToken('AdminCategories' . (int)Tab::getIdFromClassName('AdminCategories') . (int)Tools::getValue('id_employee'))) {
+        if (Tools::getValue('adtoken') == Tools::getAdminToken('AdminCategories' . (int) Tab::getIdFromClassName('AdminCategories') . (int) Tools::getValue('id_employee'))) {
             $this->category->active = 1;
         }
 

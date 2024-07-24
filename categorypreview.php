@@ -1,6 +1,8 @@
 <?php
-class CategoryPreview extends Module {
-    function __construct()
+
+class CategoryPreview extends Module
+{
+    public function __construct()
     {
         $this->name = 'categorypreview';
         $this->author = 'Adilis';
