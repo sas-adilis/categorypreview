@@ -30,7 +30,7 @@ class CategoryPreview extends Module
                 $this->context->controller->addJS($this->_path . 'views/js/categorypreview.js');
                 $adtoken = Tools::getAdminToken('AdminCategories' . (int) Tab::getIdFromClassName('AdminCategories') . (int) $this->context->employee->id);
 
-                $previewButtonUrl = $this->context->link->getCategoryLink($category->id, $category->link_rewrite);
+                $previewButtonUrl = $this->context->link->getCategoryLink($category->id, $category->link_rewrite, (int) Configuration::get('PS_LANG_DEFAULT'));
                 $previewButtonUrl .= (strpos($previewButtonUrl, '?') === false ? '?' : '&') . 'adtoken=' . $adtoken;
                 $previewButtonUrl .= '&id_employee=' . $this->context->employee->id;
 
